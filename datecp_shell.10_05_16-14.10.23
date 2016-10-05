@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#This will copy a file, wppending the date and time to the end of the 
+#file name
+
+date +%m_%d_%y-%H.%M.%S
+date_formatted=$(date +%m_%d_%y-%H.%M.%S)
+#create a variable for the  date and show its format
+echo "This is the Date and Time: " $date_formatted
+#print the date
+cp -iv $1 $2.$date_formatted
+#invoke the copy command and ask for verification(-i) and show what 
+#is being done (-v), $1 is argument for the file that will be copied
+#$2 argument will act as the ouput file argument
+
